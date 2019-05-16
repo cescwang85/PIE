@@ -1,0 +1,13 @@
+Package: PIE
+Type: Package
+Title: Penalized Interaction Estimation for Ultrahigh Dimensional Quadratic Regression
+Version: 1.3
+Date: 2019-05-16
+Author: Cheng Wang, Binyan Jiang and Liping Zhu
+Maintainer: Cheng Wang <chengwang@sjtu.edu.cn>
+Description: An direct penalized interaction estimation for high dimnesional quadratic regression
+License: GPL-2
+Depends: Matrix
+Imports: Rcpp (>= 0.12.13)
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.1
