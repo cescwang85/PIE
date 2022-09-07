@@ -8,6 +8,6 @@ Maintainer: Cheng Wang <chengwang@sjtu.edu.cn>
 Description: An direct penalized interaction estimation for high dimnesional quadratic regression
 License: GPL-2
 Depends: Matrix
+Encoding: UTF-8
 Imports: Rcpp (>= 0.12.13)
 LinkingTo: Rcpp, RcppArmadillo
-RoxygenNote: 6.1.1

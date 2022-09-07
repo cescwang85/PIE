@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // unit
 Rcpp::List unit(arma::vec eigd, arma::mat U, arma::mat An, double lambda, Rcpp::Nullable<arma::mat> Z0, Rcpp::Nullable<arma::mat> V0, double err, int maxIter, double rho);
 RcppExport SEXP _PIE_unit(SEXP eigdSEXP, SEXP USEXP, SEXP AnSEXP, SEXP lambdaSEXP, SEXP Z0SEXP, SEXP V0SEXP, SEXP errSEXP, SEXP maxIterSEXP, SEXP rhoSEXP) {
