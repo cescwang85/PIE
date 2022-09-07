@@ -1,7 +1,8 @@
 #include <RcppArmadillo.h>
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-Rcpp::List unit(arma::vec eigd,arma::mat U,arma::mat An,double lambda,Rcpp::Nullable<arma::mat> Z0=R_NilValue, Rcpp::Nullable<arma::mat> V0 = R_NilValue,double err=10^(-4),int maxIter=10^3,double rho=1){
+Rcpp::List unit(arma::vec eigd,arma::mat U,arma::mat An,double lambda,Rcpp::Nullable<arma::mat> Z0=R_NilValue, 
+                Rcpp::Nullable<arma::mat> V0 = R_NilValue,double err=1e-4,int maxIter=1e3,double rho=1){
   int ee;
   int p=An.n_rows;
   arma::mat B=(2*eigd*eigd.t())/(2*eigd*eigd.t()+rho);
